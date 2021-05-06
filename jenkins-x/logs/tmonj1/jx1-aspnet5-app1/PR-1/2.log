@@ -1,0 +1,155 @@
+
+Showing logs for build [32mtmonj1-jx1-aspnet5-app1-pr-1-pr-fsh6t-2[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1620304849.7650092,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mtmonj1-jx1-aspnet5-app1-pr-1-pr-fsh6t-2[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mtmonj1-jx1-aspnet5-app1-pr-1-pr-fsh6t-2[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mtmonj1-jx1-aspnet5-app1-pr-1-pr-fsh6t-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-tmonj1-jx1-aspnet5-app1-pr-1-pr-fsh6t-92q28[0m
+{"level":"info","ts":1620304859.9810488,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/******/**1-aspnet5-app1.git @ master in path /workspace/source"}
+{"level":"warn","ts":1620304859.9811125,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1620304860.009301,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mtmonj1-jx1-aspnet5-app1-pr-1-pr-fsh6t-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mtmonj1-jx1-aspnet5-app1-pr-1-pr-fsh6t-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:974edfddad9d1bf25a33340cb3828c835f58cb38,1:11525852b436326245d236f252bccedd16e169f9
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 11525852b436326245d236f252bccedd16e169f9: 974edfddad9d1bf25a33340cb3828c835f58cb38:
+DEBUG: ran git fetch --unshallow origin 11525852b436326245d236f252bccedd16e169f9: 974edfddad9d1bf25a33340cb3828c835f58cb38: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 974edfddad9d1bf25a33340cb3828c835f58cb38
+DEBUG: ran git reset --hard 974edfddad9d1bf25a33340cb3828c835f58cb38 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 11525852b436326245d236f252bccedd16e169f9
+DEBUG: ran git merge 11525852b436326245d236f252bccedd16e169f9 in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 974edfddad9d1bf25a33340cb3828c835f58cb38..HEAD
+Merged SHA 11525852b436326245d236f252bccedd16e169f9 with commit message 'revert' into base branch master
+Merged SHA 7b2b7438223acccfc3ee20bb950bfe7e9ac4c667 with commit message 'add hello view' into base branch master
+
+Showing logs for build [32mtmonj1-jx1-aspnet5-app1-pr-1-pr-fsh6t-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0001] Resolved base name mcr.microsoft.com/dotnet/core/sdk:2.2 to builder 
+[36mINFO[0m[0001] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0001] Retrieving image manifest mcr.microsoft.com/dotnet/core/sdk:2.2 
+[36mINFO[0m[0003] Retrieving image manifest mcr.microsoft.com/dotnet/core/sdk:2.2 
+[36mINFO[0m[0004] Retrieving image manifest mcr.microsoft.com/dotnet/core/aspnet:2.2 
+[36mINFO[0m[0004] Retrieving image manifest mcr.microsoft.com/dotnet/core/aspnet:2.2 
+[36mINFO[0m[0005] Built cross stage deps: map[0:[/app]]        
+[36mINFO[0m[0005] Retrieving image manifest mcr.microsoft.com/dotnet/core/sdk:2.2 
+[36mINFO[0m[0005] Retrieving image manifest mcr.microsoft.com/dotnet/core/sdk:2.2 
+[36mINFO[0m[0006] Executing 0 build triggers                   
+[36mINFO[0m[0006] Checking for cached layer 372853230800.dkr.ecr.ap-northeast-1.amazonaws.com/todo/cache:4ee233af499119cc442da215531c3c71e69a3214d7a18312af53a1314be4ab01... 
+[36mINFO[0m[0007] No cached layer found for cmd COPY . .       
+[36mINFO[0m[0007] Unpacking rootfs as cmd COPY . . requires it. 
+[36mINFO[0m[0077] COPY . .                                     
+[36mINFO[0m[0077] Resolving 164 paths                          
+[36mINFO[0m[0077] Taking snapshot of files...                  
+[36mINFO[0m[0078] Pushing layer 372853230800.dkr.ecr.ap-northeast-1.amazonaws.com/todo/cache:4ee233af499119cc442da215531c3c71e69a3214d7a18312af53a1314be4ab01 to cache now 
+[36mINFO[0m[0078] WORKDIR /src                                 
+[36mINFO[0m[0078] cmd: workdir                                 
+[36mINFO[0m[0078] Changed working directory to /src            
+[36mINFO[0m[0078] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0078] RUN dotnet restore                           
+[36mINFO[0m[0078] Taking snapshot of full filesystem...        
+[36mINFO[0m[0080] Resolving 34940 paths                        
+[36mINFO[0m[0115] cmd: /bin/sh                                 
+[36mINFO[0m[0115] args: [-c dotnet restore]                    
+[36mINFO[0m[0115] Running: [/bin/sh -c dotnet restore]         
+  Restore completed in 20.62 sec for /src/aspnetapp-testing/aspnetapp-testing.csproj.
+  Restore completed in 1.58 sec for /src/aspnetapp/aspnetapp.csproj.
+  Restore completed in 24.12 sec for /src/aspnetapp/aspnetapp.csproj.
+[36mINFO[0m[0166] Taking snapshot of full filesystem...        
+[36mINFO[0m[0166] Resolving 37577 paths                        
+[36mINFO[0m[0205] Pushing layer 372853230800.dkr.ecr.ap-northeast-1.amazonaws.com/todo/cache:9aac07dd9f41346f6673eab92302d3c154c9f13e01e58891360bdbd42c11fa3a to cache now 
+[36mINFO[0m[0205] RUN dotnet publish aspnetapp/aspnetapp.csproj -c Release -o /app 
+[36mINFO[0m[0205] cmd: /bin/sh                                 
+[36mINFO[0m[0205] args: [-c dotnet publish aspnetapp/aspnetapp.csproj -c Release -o /app] 
+[36mINFO[0m[0205] Running: [/bin/sh -c dotnet publish aspnetapp/aspnetapp.csproj -c Release -o /app] 
+Microsoft (R) Build Engine version 16.0.450+ga8dc7f1d34 for .NET Core
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+  Restore completed in 167.43 ms for /src/aspnetapp/aspnetapp.csproj.
+  Restore completed in 11.99 ms for /src/aspnetapp/aspnetapp.csproj.
+  aspnetapp -> /src/aspnetapp/bin/Release/netcoreapp2.2/aspnetapp.dll
+  aspnetapp -> /src/aspnetapp/bin/Release/netcoreapp2.2/aspnetapp.Views.dll
+  aspnetapp -> /app/
+[36mINFO[0m[0225] Taking snapshot of full filesystem...        
+[36mINFO[0m[0226] Resolving 37719 paths                        
+[36mINFO[0m[0253] ignoring socket CoreFxPipe_root.F.mBSPmB68F+, not adding to tar 
+[36mINFO[0m[0253] ignoring socket CoreFxPipe_root.hmO7SWqwEv4UbpiDCHUUDAaJc, not adding to tar 
+[36mINFO[0m[0254] Pushing layer 372853230800.dkr.ecr.ap-northeast-1.amazonaws.com/todo/cache:7872cafb3a809766c6b59d0b5b49dab07fac5eb9bded8903de8c4e241b2ad2f7 to cache now 
+[36mINFO[0m[0254] RUN dotnet test --logger "trx;LogFileName=./aspnetapp.trx" 
+[36mINFO[0m[0254] cmd: /bin/sh                                 
+[36mINFO[0m[0254] args: [-c dotnet test --logger "trx;LogFileName=./aspnetapp.trx"] 
+[36mINFO[0m[0254] Running: [/bin/sh -c dotnet test --logger "trx;LogFileName=./aspnetapp.trx"] 
+Test run for /src/aspnetapp-testing/bin/Debug/netcoreapp2.2/aspnetapp-testing.dll(.NETCoreApp,Version=v2.2)
+Microsoft (R) Test Execution Command Line Tool Version 16.0.1
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+Results File: /src/aspnetapp-testing/TestResults/./aspnetapp_2021-05-06_12-45-29-906.trx
+
+Total tests: 1. Passed: 1. Failed: 0. Skipped: 0.
+Test Run Successful.
+Test execution time: 3.9208 Seconds
+[36mINFO[0m[0268] Taking snapshot of full filesystem...        
+[36mINFO[0m[0268] Resolving 37734 paths                        
+[36mINFO[0m[0293] ignoring socket CoreFxPipe_root.F.mBSPmB68F+, not adding to tar 
+[36mINFO[0m[0293] Pushing layer 372853230800.dkr.ecr.ap-northeast-1.amazonaws.com/todo/cache:d9e14759e73b2c7d16d7ed7ed182870ec1f3c30e445d269825649d0d57fb73e0 to cache now 
+[33mWARN[0m[0295] error uploading layer to cache: failed to push to destination 372853230800.dkr.ecr.ap-northeast-1.amazonaws.com/todo/cache:4ee233af499119cc442da215531c3c71e69a3214d7a18312af53a1314be4ab01: POST https://372853230800.dkr.ecr.ap-northeast-1.amazonaws.com/v2/todo/cache/blobs/uploads/: NAME_UNKNOWN: The repository with name 'todo/cache' does not exist in the registry with id '372853230800' 
+[36mINFO[0m[0295] Saving file app for later use                
+[36mINFO[0m[0295] Deleting filesystem...                       
+[36mINFO[0m[0298] Retrieving image manifest mcr.microsoft.com/dotnet/core/aspnet:2.2 
+[36mINFO[0m[0300] Retrieving image manifest mcr.microsoft.com/dotnet/core/aspnet:2.2 
+[36mINFO[0m[0300] Executing 0 build triggers                   
+[36mINFO[0m[0300] Checking for cached layer 372853230800.dkr.ecr.ap-northeast-1.amazonaws.com/todo/cache:b0bc91388f6cac47487deb51f34fb2a1b5e932308c4f844e6aeda965c6a15950... 
+[36mINFO[0m[0302] No cached layer found for cmd COPY --from=builder /app . 
+[36mINFO[0m[0302] Unpacking rootfs as cmd COPY --from=builder /app . requires it. 
+[36mINFO[0m[0313] COPY --from=builder /app .                   
+[36mINFO[0m[0313] Resolving 68 paths                           
+[36mINFO[0m[0313] Taking snapshot of files...                  
+[36mINFO[0m[0313] Pushing layer 372853230800.dkr.ecr.ap-northeast-1.amazonaws.com/todo/cache:b0bc91388f6cac47487deb51f34fb2a1b5e932308c4f844e6aeda965c6a15950 to cache now 
+[36mINFO[0m[0313] ENTRYPOINT ["dotnet", "aspnetapp.dll"]       
+[36mINFO[0m[0313] No files changed in this command, skipping snapshotting. 
+[33mWARN[0m[0315] error uploading layer to cache: failed to push to destination 372853230800.dkr.ecr.ap-northeast-1.amazonaws.com/todo/cache:b0bc91388f6cac47487deb51f34fb2a1b5e932308c4f844e6aeda965c6a15950: POST https://372853230800.dkr.ecr.ap-northeast-1.amazonaws.com/v2/todo/cache/blobs/uploads/: NAME_UNKNOWN: The repository with name 'todo/cache' does not exist in the registry with id '372853230800' 
+
+Showing logs for build [32mtmonj1-jx1-aspnet5-app1-pr-1-pr-fsh6t-2[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mtmonj1-jx1-aspnet5-app1-pr-1-pr-fsh6t-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-make-preview[0m
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-1-2/" Chart.yaml
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-1-2/" ../*/Chart.yaml
+sed -i -e "s|repository:.*|repository: 372853230800.dkr.ecr.ap-northeast-1.amazonaws.com\/******\/**1-aspnet5-app1|" values.yaml
+sed -i -e "s/tag:.*/tag: 0.0.0-SNAPSHOT-PR-1-2/" values.yaml
+sed -i -e "s/tag:.*/tag: 0.0.0-SNAPSHOT-PR-1-2/" values.yaml
+pwd
+/workspace/source/charts/preview
+ls
+Chart.yaml
+Makefile
+requirements.yaml
+templates
+values.yaml
+ls ..
+**1-aspnet5-app1
+preview
+echo "  version: 0.0.0-SNAPSHOT-PR-1-2" >> requirements.yaml
+** step helm build
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+error: failed to build the dependencies of chart '.': failed to run 'helm dependency build' command in directory '.', output: 'Hang tight while we grab the latest from your chart repositories...
+...Unable to get an update from the "local" chart repository (http://127.0.0.1:8879/charts):
+	Get "http://127.0.0.1:8879/charts/index.yaml": dial tcp 127.0.0.1:8879: connect: connection refused
+...Successfully got an update from the "jenkins-x-chartmuseum" chart repository'
+make: *** [preview] Error 1
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-promote-make-preview'. The execution of the pipeline has stopped.[0m
