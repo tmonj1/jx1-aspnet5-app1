@@ -23,11 +23,6 @@ namespace aspnetapp.Controllers
             return View();
         }
 
-        public IActionResult Hello()
-        {
-            return View();
-        }
-
         public IActionResult Error()
         {
             return View();
